@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_LEFT"
+      prefHeight="537.0" prefWidth="900.0"
+      spacing="15.0"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ni.edu.uam.servicioswebg3.Controller.UsuarioController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0"
+                right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Consulta de usuarios - API REST">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+
+        <Button fx:id="btnConsultar"
+                mnemonicParsing="false"
+                text="Consultar usuarios"
+                onAction="#consultarUsuarios" />
+
+        <Label fx:id="lblEstado"
+               text="Presione Consultar usuarios" />
+
+    </HBox>
+
+    <TableView fx:id="tablaUsuarios"
+               prefHeight="420.0"
+               VBox.vgrow="ALWAYS">
+
+        <columns>
+            <TableColumn fx:id="colId"
+                         prefWidth="60.0"
+                         text="ID" />
+
+            <TableColumn fx:id="colNombre"
+                         prefWidth="140.0"
+                         text="Nombre" />
+
+            <TableColumn fx:id="colUsername"
+                         prefWidth="130.0"
+                         text="Username" />
+
+            <TableColumn fx:id="colCorreo"
+                         prefWidth="170.0"
+                         text="Correo" />
+
+            <TableColumn fx:id="colTelefono"
+                         prefWidth="120.0"
+                         text="Teléfono" />
+
+            <TableColumn fx:id="colCiudad"
+                         prefWidth="110.0"
+                         text="Ciudad" />
+
+            <TableColumn fx:id="colEmpresa"
+                         prefWidth="120.0"
+                         text="Empresa" />
+        </columns>
+
+        <placeholder>
+            <Label text="Tabla sin contenido" />
+        </placeholder>
+
+    </TableView>
+
+</VBox>
