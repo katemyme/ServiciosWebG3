@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<!-- Ventana principal: cada pestaña incluye una vista con su propio controlador -->
+<TabPane prefHeight="600.0" prefWidth="1150.0"
+         tabClosingPolicy="UNAVAILABLE"
+         xmlns="http://javafx.com/javafx/17.0.12"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <tabs>
+        <Tab text="Usuarios">
+            <content>
+                <fx:include source="Usuario-view.fxml" />
+            </content>
+        </Tab>
+        <Tab text="Clientes">
+            <content>
+                <fx:include source="Cliente-view.fxml" />
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

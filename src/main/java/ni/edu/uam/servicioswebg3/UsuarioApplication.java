@@ -10,9 +10,10 @@ import java.io.IOException;
 public class UsuarioApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(UsuarioApplication.class.getResource("Usuario-view.fxml"));
+        // Main-view.fxml contiene las pestañas "Usuarios" y "Clientes"
+        FXMLLoader fxmlLoader = new FXMLLoader(UsuarioApplication.class.getResource("Main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+        stage.setTitle("Servicios Web G3");
         stage.setScene(scene);
         stage.show();
     }
